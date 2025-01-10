@@ -15,30 +15,30 @@ window.addEventListener("scroll", () => {
 
 <template>
     <div class="navbar highlight">
-        <RouterLink to="/" class="crest"><img src="/media/crest.svg" alt="Gryphon Racing Crest" /></RouterLink>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/team">Team</RouterLink>
-        <RouterLink to="/cars">Our Cars</RouterLink>
-        <RouterLink to="/sponsors">Sponsors</RouterLink>
-        <RouterLink to="/info">Info</RouterLink>
+        <RouterLink to="/" class="text"><img src="/media/logos/RevOutline-WIDERaceReadyModules.png" alt="Race Ready Modules" /></RouterLink>
+        <RouterLink to="/" class="crest"><img src="/media/logos/RevOutline-RaceReadyModules.png" alt="Race Ready Modules" /></RouterLink>
+        <RouterLink to="/shop">Shop</RouterLink>
+        <RouterLink to="/team">Partner Teams</RouterLink>
+        <RouterLink to="/sponsors">Sponsorship</RouterLink>
+        <!-- <RouterLink to="/info">Docs</RouterLink> -->
         <MenuIcon class="hamburger" @click="dropdown_active = !dropdown_active"></MenuIcon>
     </div>
 
     <transition name="slide">
         <div class="dropdown highlight" v-if="dropdown_active" @click="dropdown_active = !dropdown_active">
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/team">Team</RouterLink>
-            <RouterLink to="/cars">Our Cars</RouterLink>
-            <RouterLink to="/sponsors">Sponsors</RouterLink>
-            <RouterLink to="/info">Info</RouterLink>
+            <RouterLink to="/shop">Shop</RouterLink>
+            <RouterLink to="/team">Partner Teams</RouterLink>
+            <RouterLink to="/sponsors">Sponsorship</RouterLink>
+            <!-- <RouterLink to="/info">Docs</RouterLink> -->
         </div>
     </transition>
 </template>
 
 <style scoped>
-.crest img {
+.text img {
     height: 70%;
     margin: 10px;
+    filter: var(--light-black-filter);
 }
 
 .navbar {
@@ -53,14 +53,29 @@ window.addEventListener("scroll", () => {
     z-index: 1000;
 }
 
-.navbar > * {
+.crest img {
+    display: none;
+}
+
+.navbar > a:not(a:nth-child(-n + 2)) {
     padding: 0 20px;
-    color: var(--gryphon-white);
+    color: var(--gryphon-light-black);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
     display: flex;
     align-items: center;
+    text-align: center;
+}
+
+.navbar > span {
+    padding: 0 20px;
+    color: var(--gryphon-light-black);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
 }
 
 .dropdown {
@@ -78,25 +93,28 @@ window.addEventListener("scroll", () => {
 
 .dropdown a {
     padding: 10px 25px;
-    color: var(--gryphon-white);
+    color: var(--gryphon-light-black);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
     display: flex;
     align-items: center;
     background-color: var(--gryphon-red-transparent);
-    border-top: 1px solid var(--gryphon-white);
-    border-left: 1px solid var(--gryphon-white);
+    border-top: 2px solid var(--gryphon-light-black);
+    border-left: 2px solid var(--gryphon-light-black);
 }
 
 .dropdown :last-child {
-    border-radius: 0 0 0 25px;
-    border-bottom: 1px solid var(--gryphon-white);
+    border-radius: 0 0 0 1rem;
+    border-bottom: 2px solid var(--gryphon-light-black);
+}
+.dropdown :first-child {
+    border-top: 0;
 }
 
 .hamburger {
     display: none;
-    color: var(--gryphon-white);
+    color: var(--gryphon-light-black);
     font-size: 2rem;
     margin-left: auto;
     margin-right: 10px;
@@ -109,16 +127,40 @@ window.addEventListener("scroll", () => {
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .highlight a:not(.crest):hover {
+    .highlight a:hover:not(.text, .crest) {
         /* Dont highlight the crest cause it looks weird */
-        background-color: var(--gryphon-yellow);
-        color: var(--gryphon-light-black);
-        transition-duration: 300ms;
+        background-color: var(--gryphon-light-black);
+        color: var(--gryphon-red);
+        transition-duration: 0.5s;
+    }
+    .highlight .text:hover img,
+    .highlight .crest:hover img {
+        /* Dont highlight the crest cause it looks weird */
+        filter: var(--red-filter);
+        transition-duration: 0.5s;
+    }
+    .highlight .text:hover,
+    .highlight .crest:hover {
+        /* Dont highlight the crest cause it looks weird */
+        background-color: var(--gryphon-light-black);
+        transition-duration: 0.5s;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .text {
+        display: none;
+    }
+    .crest img {
+        height: 70%;
+        margin: 10px;
+        filter: var(--light-black-filter);
+        display: block;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .navbar a:not(:nth-child(1)) {
+    .navbar a:not(a:nth-child(2)) {
         display: none;
     }
 

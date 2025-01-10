@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import CarGallery from "@/components/CarGallery.vue";
+import CarGallery from "@/components/ImageGallery.vue";
 
 const ourCars = [
     {

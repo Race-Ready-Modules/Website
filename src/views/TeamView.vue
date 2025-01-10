@@ -13,36 +13,10 @@ import LeadProfile from "@/components/LeadProfile.vue";
             <img src="/media/team_photo.webp" alt="Team Photo" width="1000" height="563" />
         </div>
 
-        <h2>Team Captains</h2>
+        <h2>Partner Teams</h2>
         <hr />
         <div class="profiles_list">
-            <LeadProfile title="Admin" name="Ayden Bourdeau" linkedin="https://www.linkedin.com/in/aydenbourdeau/" />
-            <LeadProfile title="Dynamics" name="Matt Aziz" linkedin="https://linkedin.com/in/matthewaziz" />
-            <LeadProfile title="Electrical" name="Matt Verburg" linkedin="https://www.linkedin.com/in/matthew-verburg-851951261/" />
-        </div>
-
-        <h2>Team Leads</h2>
-        <hr />
-        <div class="profiles_list">
-            <LeadProfile title="Suspension" name="Owen Frey" linkedin="https://www.linkedin.com/in/owen-frey-8435b3261/" />
-            <LeadProfile title="Low Voltage" name="Rayne van Voorst" linkedin="https://www.linkedin.com/in/rayne-van-voorst-691030225/" />
-            <LeadProfile title="Harness" name="Patrick McNutt" linkedin="https://www.linkedin.com/in/patrick-mcnutt-95a6681a7/" />
-            <LeadProfile title="Embedded" name="Dallas Hart" linkedin="https://www.linkedin.com/in/dallas-hart/" />
-            <LeadProfile title="Aerodynamics" name="Rajaee Mundle" linkedin="https://www.linkedin.com/in/rajaee-mundle-56195824b/" />
-            <LeadProfile title="Aerodynamics" name="Hayden Foley" linkedin="https://www.linkedin.com/in/hayden-foley-a67b44235" />
-            <LeadProfile title="Business" name="Bethany Hughes" />
-        </div>
-
-        <h2>Senior Members</h2>
-        <hr />
-        <div class="profiles_list">
-            <LeadProfile title="Software" name="Evan Rutten" linkedin="https://www.linkedin.com/in/evan-rutten/" />
-            <LeadProfile title="Electrical" name="Chris Walker" linkedin="https://www.linkedin.com/in/christopher-w-185485216/" />
-            <LeadProfile title="CAD" name="Jacob Dykstra" linkedin="https://www.linkedin.com/in/jacob-dykstra-071889268/" />
-            <LeadProfile title="CAD" name="Julian VanLandschoot" />
-            <LeadProfile title="Manufacturing" name="Jonathan Chung" linkedin="https://www.linkedin.com/in/jonathan-chung-b05941242/" />
-            <LeadProfile title="Dynamics" name="Korab Islami" linkedin="https://www.linkedin.com/in/korabislami/" />
-            <LeadProfile title="Dynamics" name="Max Brown" linkedin="https://www.linkedin.com/in/max-brown-314957263" />
+            <LeadProfile comps="FH+E, FSAE" title="Ontario Canada" name="Gryphon Racing" img="/teams/gryphon_racing/A.jpg" link="https://gryphonracing.org" />
         </div>
     </div>
 </template>

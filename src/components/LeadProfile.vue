@@ -1,44 +1,12 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
-const props = defineProps<{ title: string; name: string; linkedin?: string }>();
-
-const known_names = [
-    "ayden_bourdeau",
-    "owen_frey",
-    "dallas_hart",
-    "matt_aziz",
-    "patrick_mcnutt",
-    "rayne_van_voorst",
-    "matt_verburg",
-    "hayden_foley",
-    "rajaee_mundle",
-    "evan_rutten",
-    "chris_walker",
-    "jacob_dykstra",
-    "bethany_hughes",
-    "korab_islami",
-    "jonathan_chung",
-    "max_brown",
-    "julian_vanlandschoot",
-];
-
-const profile_picture_url = computed(() => {
-    let cleaned_name = props.name.replaceAll(" ", "_").toLowerCase();
-    if (!known_names.includes(cleaned_name)) {
-        console.warn(`Unknown name: ${props.name} : ${cleaned_name}}`);
-        cleaned_name = "unknown";
-    }
-
-    return import.meta.env.BASE_URL + `media/team_members/${cleaned_name}.webp`;
-});
-
-const popup = ref(false);
+const props = defineProps<{ comps: string; title: string; name: string; img: string; link?: string }>();
 </script>
 
 <template>
-    <a class="card" :href="linkedin" target="_blank" @click="popup = true">
-        <img :src="profile_picture_url" class="profile_picture" :alt="props.name" />
+    <a class="card" :href="link" target="_blank">
+        <img :src="img" class="profile_picture" :alt="props.name" />
         <h1>{{ props.name }}</h1>
+        <h2>{{ props.comps }}</h2>
         <h2>{{ props.title }}</h2>
 
         <!-- We can add a popup later for each captain/lead -->

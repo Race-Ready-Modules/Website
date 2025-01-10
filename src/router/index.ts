@@ -6,6 +6,15 @@ export const routes = [
         component: HomeView,
     },
     {
+        path: "/shop",
+        component: () => import("@/views/ShopView.vue"),
+    },
+    {
+        path: "/shop/:item",
+        component: () => import("@/views/ItemView.vue"),
+        props: true,
+    },
+    {
         path: "/info",
         component: () => import("@/views/InfoView.vue"),
     },

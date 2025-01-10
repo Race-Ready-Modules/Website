@@ -34,19 +34,6 @@ onMounted(() => {
             <div id="map" class="map"></div>
         </div>
 
-        <iframe width="540" height="810" src="https://aaf090a9.sibforms.com/serve/MUIFAA9U7cVYUDM0j3J9d_h4gpjuB9N30FuKYI2oT6HIJjYgsDpHEGk8R-jvFyu12-rsnJCYsBa9Y22Gc32jYZiRibzKyyv7JlmbQ0d_9o2_QXlW8tO0W912dDN-m3mFaSmafgsMSwwgz9y0t9Ps4IWJ_d4CzGZWYUpZmctGSWMBR-4RGwVeg5cKNZzI7sDt8zBh8ht_hy5GSfIH" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
-
-        <div class="links-wrapper">
-            <h2>Club Documents</h2>
-            <a href="/media/club_docs/Constitution.pdf" target="_blank">Constitution</a>
-            <hr />
-            <a href="/media/club_docs/Individual_Responsibility_Signoff.pdf" target="_blank">Individual Responsibility Signoff</a>
-            <hr />
-            <a href="/media/club_docs/Leadership_Code_of_Conduct.pdf" target="_blank">Leadership Code of Conduct</a>
-            <hr />
-            <a href="/media/club_docs/Vehicle_Usage_Procedure.pdf" target="_blank">Vehicle Usage Procedure</a>
-            <hr />
-        </div>
     </div>
 </template>
 
@@ -113,19 +100,6 @@ h2 {
     margin-right: auto;
 }
 
-a {
-    display: block;
-    font-size: 1.5em;
-    text-decoration: none;
-    padding-top: 1em;
-    padding-left: 0.5em;
-    color: black;
-    transition-duration: 0.2s;
-}
-a:hover {
-    color: var(--gryphon-red);
-    translate: 8px;
-}
 
 hr {
     border: 0;

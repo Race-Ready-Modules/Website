@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-    --gryphon-red: #C20430;
-    --gryphon-red-transparent: #C20430CC;
+    --gryphon-red: #04c234;
+    --gryphon-red-transparent: #04c234CC;
     --gryphon-yellow: #FFC72A;
     --gryphon-light-black: #2C2C2C;
     --gryphon-black: #000000;
@@ -13,13 +13,16 @@
     --gryphon-dark-white: #E5E5E5;
     --gryphon-white: #FFFFFF;
 
+    --light-black-filter: brightness(0) saturate(100%) invert(12%) sepia(0%) saturate(0%) hue-rotate(136deg) brightness(105%) contrast(88%);
+    --red-filter: brightness(0) saturate(100%) invert(43%) sepia(90%) saturate(1219%) hue-rotate(102deg) brightness(102%) contrast(97%);
+
     --swiper-theme-color: var(--gryphon-red-transparent) !important;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--gryphon-light-black);
-    color: var(--gryphon-dark-white);
+    color: var(--gryphon-black);
     margin: 0;
 }
 
