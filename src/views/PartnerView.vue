@@ -21,6 +21,20 @@ import LeadProfile from "@/components/LeadProfile.vue";
 
             <p>Insights from partner teams help us refine our products, allowing us to create rules-legal solutions designed solely for Formula Student teams.</p>
 
+            <h2>Partner Supported Competitions:</h2>
+            <ul>
+                <li>Formula SAE Electric</li>
+                <li>Formula Hybrid + Electric</li>
+            </ul>
+
+            <h2>Looking for Partners From:</h2>
+            <ul>
+                <li>Formula Student Germany</li>
+                <li>Formula Student UK</li>
+                <li>Formula Bharat</li>
+                <li>Formula SAE Brazil</li>
+            </ul>
+
             <div class="button-wrapper">
                 <a class="button" href="mailto:racereadymodules@gmail.com?subject=Becoming a Race Ready Modules Partner">Partner with us!</a>
             </div>
@@ -75,31 +89,29 @@ a {
 }
 
 .meet_the_team {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 5%;
     justify-content: space-evenly;
     align-items: center;
     max-width: 600px;
+    flex-flow: column;
 }
 
 h1 {
     text-align: center;
-    font-size: 5vw;
     font-weight: bolder;
+    font-size: 4rem;
+    margin: 0 0.4rem;
+}
+
+h2 {
+    text-align: center;
     margin: 0;
 }
 
 .red_team {
     color: var(--gryphon-red-transparent);
-}
-
-.meet_the_team img {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    margin-left: 8vw;
-    width: 60%;
-    height: auto;
 }
 
 hr {
@@ -110,11 +122,6 @@ hr {
     background: linear-gradient(to right, var(--gryphon-white) 5%, var(--gryphon-red) 50%, var(--gryphon-white) 95%);
     height: 3px;
     border-radius: 50px;
-}
-
-h2 {
-    text-align: center;
-    margin: 0;
 }
 
 .profiles_list {
@@ -135,27 +142,9 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-flow: row wrap;
 }
 .title > h1 {
     display: inline;
-}
-
-@media screen and (max-width: 1000px) {
-    h1 {
-        font-size: 8vw;
-        margin: 1vw;
-    }
-
-    .meet_the_team {
-        flex-direction: column;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 3rem;
-    }
-
-    .meet_the_team img {
-        margin: 0;
-        width: 95%;
-    }
 }
 </style>

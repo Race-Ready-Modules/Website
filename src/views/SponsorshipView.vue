@@ -22,9 +22,7 @@
         <h2>Sponsored Teams</h2>
         <hr />
         <div class="title">
-            <h1>Be</h1>
-            <h1 class="red_team">the</h1>
-            <h1>first!</h1>
+            <h1>Be the first!</h1>
         </div>
         <hr />
     </div>
@@ -81,7 +79,7 @@ a {
 
 h1 {
     text-align: center;
-    font-size: 5vw;
+    font-size: 2rem;
     font-weight: bolder;
     margin: 0;
 }
@@ -136,10 +134,6 @@ a {
         display: flex;
     }
 
-    h1 {
-        font-size: 8vw;
-        margin: 1vw;
-    }
 
     .meet_the_team {
         flex-direction: column;
