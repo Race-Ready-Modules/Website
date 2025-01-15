@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import ImageGallery from "@/components/ImageGallery.vue";
+import products from "@/products.json";
+import { ref } from "vue";
 
-const props = defineProps<{ item: number | string }>();
+const props = defineProps<{ item: string }>();
+
+const product = ref(products[props.item]);
+const images = ref(product.value.images.map((img: string) => `/products/${product.value.name}/${img}`));
+const product_description = ref(products[props.item].description.join(""));
 </script>
 
 <template>
@@ -9,34 +15,26 @@ const props = defineProps<{ item: number | string }>();
         <hr />
         <div class="row">
             <div class="gallery-wrapper">
-                <ImageGallery :images="[`/products/AIL Driver/front.png`, `/products/AIL Driver/back.png`, `/products/AIL Driver/schematic.png`]" />
+                <ImageGallery :images="images" />
             </div>
             <div class="description_wrapper">
-                <h2>{{ props.item }}</h2>
+                <h2>{{ product.name }}</h2>
                 <hr />
 
-                <p>This AIL Driver is a reliable, 600V, constant current driver available for LED or Neon Lamp Indicators.</p>
-                <p>Available with current limits of 1mA, 5mA, & 10mA. For LEDs, typical threshold of 51V + Vf.</p>
-                <p>Footprint area of 0.72in<sup>2</sup>!</p>
-
-                <p>Legal for the following rulesets:</p>
-                <ul>
-                    <li>Formula Hybrid + Electric</li>
-                    <li>Formula SAE Electric</li>
-                    <li>Formula Student Germany</li>
-                    <li>Formula Student UK</li>
-                </ul>
+                <div v-html="product_description"></div>
 
                 <div class="button-wrapper">
-                    <a class="button" :href="`mailto:racereadymodules@gmail.com?subject=Interest in ${props.item}`">Express Interest!</a>
+                    <a class="button" :href="`mailto:racereadymodules@gmail.com?subject=Interest in ${product.name}`">Express Interest!</a>
                 </div>
 
                 <p></p>
 
-                <div class="links-wrapper">
+                <div class="links-wrapper" v-if="product.documents.length != 0">
                     <h2>Documents</h2>
-                    <a href="/media/club_docs/Constitution.pdf" target="_blank">Datasheet</a>
-                    <hr />
+                    <template v-for="doc in product.documents" :key="doc.name">
+                        <a :href="doc.url" target="_blank">{{ doc.name }}</a>
+                        <hr />
+                    </template>
                     <!-- <a href="/media/club_docs/Individual_Responsibility_Signoff.pdf" target="_blank">Docs</a>
                     <hr /> -->
                 </div>

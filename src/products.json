@@ -1,0 +1,54 @@
+{
+    "0": {
+        "id": 0,
+        "name": "AIL Driver",
+        "images": ["front", "back", "schematic"],
+        "documents": [
+            {
+                "url": "datasheet.pdf",
+                "name": "Datasheet"
+            }
+        ],
+        "competitions": ["FH+E", "FSAE", "FSG", "FSUK"],
+        "price": "Price: TBD",
+        "description": [
+"<p>This AIL Driver is a reliable, 600V, constant current driver available for LED or Neon Lamp Indicators.</p>",
+"<p>Available with current limits of 1mA, 5mA, & 10mA. For LEDs, typical threshold of 51V + Vf.</p>",
+            "<p>Footprint area of 0.72in<sup>2</sup>!</p>",
+            "<p>Legal for the following rulesets:</p>",
+            "<ul>",
+                "<li>Formula Hybrid + Electric</li>",
+                "<li>Formula SAE Electric</li>",
+                "<li>Formula Student Germany</li>",
+                "<li>Formula Student UK</li>",
+            "</ul>"
+        ]
+    },
+    "1": {
+        "id": 1,
+        "name": "BSPD Logic Module",
+        "images": [],
+        "documents": [],
+        "competitions": ["FSAE"],
+        "price": "Price: TBD",
+        "description": []
+    },
+    "2": {
+        "id": 1,
+        "name": "TSAL/RTML Driver",
+        "images": [],
+        "documents": [],
+        "competitions": ["FSAE"],
+        "price": "Price: TBD",
+        "description": []
+    },
+    "3": {
+        "id": 1,
+        "name": "PC/DC Driver",
+        "images": [],
+        "documents": [],
+        "competitions": ["FSAE"],
+        "price": "Price: TBD",
+        "description": []
+    }
+}

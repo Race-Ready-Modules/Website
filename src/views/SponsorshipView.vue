@@ -1,27 +1,65 @@
 <script setup lang="ts">
-import LeadProfile from "@/components/LeadProfile.vue";
+// import LeadProfile from "@/components/LeadProfile.vue";
 </script>
 
 <template>
     <div class="team">
         <div class="meet_the_team">
             <div class="title">
-                <h1>Meet</h1>
-                <h1 class="yellow_team">the</h1>
-                <h1 class="red_team">team.</h1>
+                <h1>Sponsorship Program</h1>
             </div>
-            <img src="/media/team_photo.webp" alt="Team Photo" width="1000" height="563" />
+
+            <p>
+                As part of our commitment to advancing Formula Student, Race Ready Modules offers a sponsorship program to support ambitious teams striving for excellence. Sponsorship packages are
+                designed to reduce financial strain while providing access to our selection of modules and expertise.
+            </p>
+
+            <div class="button-wrapper">
+                <a class="button" href="mailto:racereadymodules@gmail.com?subject=Race Ready Modules Sponsorship">Apply for a Sponsorship!</a>
+            </div>
         </div>
 
         <h2>Sponsored Teams</h2>
         <hr />
-        <div class="profiles_list">
-            <LeadProfile comps="FH+E, FSAE" title="Ontario Canada" name="Gryphon Racing" img="/teams/gryphon_racing/A.jpg" link="https://gryphonracing.org" />
+        <div class="title">
+            <h1>Be</h1>
+            <h1 class="red_team">the</h1>
+            <h1>first!</h1>
         </div>
+        <hr />
     </div>
 </template>
 
 <style scoped>
+a {
+    text-decoration: none;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.button {
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    border: none;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 10px var(--gryphon-light-gray);
+    text-decoration: none;
+    color: var(--gryphon-light-black);
+    max-width: 350px;
+    padding: 0.5rem;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--gryphon-red);
+}
+
 .team {
     background-color: var(--gryphon-white);
     padding: 7em 2em 4em;
@@ -46,10 +84,6 @@ h1 {
     font-size: 5vw;
     font-weight: bolder;
     margin: 0;
-}
-
-.yellow_team {
-    color: var(--gryphon-yellow);
 }
 
 .red_team {

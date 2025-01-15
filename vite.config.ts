@@ -20,5 +20,20 @@ export default defineConfig(({ mode }: ConfigEnv) => {
         // https://vitejs.dev/guide/static-deploy.html#github-pages
         // This parameter is always expected to end in a "/"
         base: env.VITE_BASE_URL,
+        ssgOptions: {
+            includedRoutes(_, routes) {
+                const newroutes: string[] = [];
+                for (const route of routes) {
+                    if (!route.path.includes(":")) {
+                        newroutes.push(route.path);
+                    }
+                }
+
+                for (let a = 0; a < 4; a++) {
+                    newroutes.push(`/shop/${a}`);
+                }
+                return newroutes;
+            },
+        },
     };
 });

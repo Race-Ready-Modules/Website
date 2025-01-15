@@ -24,8 +24,13 @@ const options: PaginationOptions = {
 <template>
     <div class="wrapper">
         <swiper :spaceBetween="30" :pagination="options" :modules="modules">
-            <swiper-slide v-for="image in props.images" :key="image">
-                <img :src="`${image}`" alt="Image Gallery" />
+            <template v-if="props.images.length != 0">
+                <swiper-slide v-for="image in props.images" :key="image">
+                    <img :src="`${image}`" alt="Image Gallery" />
+                </swiper-slide>
+            </template>
+            <swiper-slide v-else>
+                <img src="/media/coming_soon.png" alt="Image Gallery" />
             </swiper-slide>
         </swiper>
     </div>

@@ -27,8 +27,8 @@ window.addEventListener("scroll", () => {
     <transition name="slide">
         <div class="dropdown highlight" v-if="dropdown_active" @click="dropdown_active = !dropdown_active">
             <RouterLink to="/shop">Shop</RouterLink>
-            <RouterLink to="/team">Partner Teams</RouterLink>
-            <RouterLink to="/sponsors">Sponsorship</RouterLink>
+            <RouterLink to="/partners">Partner Teams</RouterLink>
+            <RouterLink to="/sponsorship">Sponsorship</RouterLink>
             <!-- <RouterLink to="/info">Docs</RouterLink> -->
         </div>
     </transition>

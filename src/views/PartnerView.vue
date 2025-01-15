@@ -6,11 +6,24 @@ import LeadProfile from "@/components/LeadProfile.vue";
     <div class="team">
         <div class="meet_the_team">
             <div class="title">
-                <h1>Meet</h1>
-                <h1 class="yellow_team">the</h1>
-                <h1 class="red_team">team.</h1>
+                <h1>Partner</h1>
+                <h1 class="red_team">with</h1>
+                <h1>us.</h1>
             </div>
-            <img src="/media/team_photo.webp" alt="Team Photo" width="1000" height="563" />
+
+            <p>For our partner teams, we go beyond providing products - we become an integral part of their Formula Student journey. Partner teams benefit from:</p>
+
+            <ul>
+                <li>Discounted pricing</li>
+                <li>Technical & ESF support</li>
+                <li>Priority access to new products</li>
+            </ul>
+
+            <p>Insights from partner teams help us refine our products, allowing us to create rules-legal solutions designed solely for Formula Student teams.</p>
+
+            <div class="button-wrapper">
+                <a class="button" href="mailto:racereadymodules@gmail.com?subject=Becoming a Race Ready Modules Partner">Partner with us!</a>
+            </div>
         </div>
 
         <h2>Partner Teams</h2>
@@ -18,10 +31,40 @@ import LeadProfile from "@/components/LeadProfile.vue";
         <div class="profiles_list">
             <LeadProfile comps="FH+E, FSAE" title="Ontario Canada" name="Gryphon Racing" img="/teams/gryphon_racing/A.jpg" link="https://gryphonracing.org" />
         </div>
+        <hr />
     </div>
 </template>
 
 <style scoped>
+a {
+    text-decoration: none;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.button {
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    border: none;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 0 10px var(--gryphon-light-gray);
+    text-decoration: none;
+    color: var(--gryphon-light-black);
+    max-width: 250px;
+    padding: 0.5rem;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--gryphon-red);
+}
+
 .team {
     background-color: var(--gryphon-white);
     padding: 7em 2em 4em;
@@ -35,10 +78,9 @@ import LeadProfile from "@/components/LeadProfile.vue";
     padding-left: 15%;
     padding-right: 15%;
     padding-bottom: 5%;
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    max-width: 1200px;
+    max-width: 600px;
 }
 
 h1 {
@@ -46,10 +88,6 @@ h1 {
     font-size: 5vw;
     font-weight: bolder;
     margin: 0;
-}
-
-.yellow_team {
-    color: var(--gryphon-yellow);
 }
 
 .red_team {
@@ -79,10 +117,6 @@ h2 {
     margin: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
 .profiles_list {
     max-width: 1200px;
     display: flex;
@@ -97,11 +131,16 @@ a {
     margin: 0.5em;
 }
 
-@media screen and (max-width: 1000px) {
-    .title {
-        display: flex;
-    }
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title > h1 {
+    display: inline;
+}
 
+@media screen and (max-width: 1000px) {
     h1 {
         font-size: 8vw;
         margin: 1vw;

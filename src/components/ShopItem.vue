@@ -2,13 +2,13 @@
 import { ref } from "vue";
 import { RouterLink } from "vue-router";
 
-const props = defineProps<{ title: string; price: string; comps: string; img: string }>();
+const props = defineProps<{ id: number; title: string; price: string; comps: string; img: string }>();
 
 const is_error_active = ref(false);
 </script>
 
 <template>
-    <RouterLink class="card" :to="`/shop/` + title">
+    <RouterLink class="card" :to="`/shop/` + id">
         <img v-if="!is_error_active" :src="img" class="profile_picture" :alt="props.title" @error="is_error_active = true" />
         <img v-else src="/media/coming_soon.png" class="profile_picture" alt="Coming Soon" />
         <h1>{{ props.title }}</h1>

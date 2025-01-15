@@ -1,37 +1,17 @@
 <script setup lang="ts">
 import ShopItem from "@/components/ShopItem.vue";
+import product_data from "@/products.json";
+import { ref } from "vue";
 
-const products = [
-    {
-        title: "AIL Driver",
-        price: "Price: TBD",
-        comps: ["FH+E", "FSAE", "FSG", "FSUK"],
-    },
-    {
-        title: "BSPD Logic Module",
-        price: "Price: TBD",
-        comps: ["FSAE"],
-    },
-    {
-        title: "TSAL/RTML Driver",
-        price: "Price: TBD",
-        comps: ["FSAE"],
-    },
-    {
-        title: "PC/DC Driver",
-        price: "Price: TBD",
-        comps: ["FSAE"],
-        img: "/teams/gryphon_racing/A.jpg",
-    },
-];
+const products = ref(Object.values(product_data));
 </script>
 
 <template>
     <div class="team">
         <hr />
         <div class="profiles_list">
-            <template v-for="item in products" :key="item.title">
-                <ShopItem :title="item.title" :price="item.price" :comps="item.comps.join(', ')" :img="`/products/${item.title}/preview.png`" />
+            <template v-for="(item, _) in products" :key="item.title">
+                <ShopItem :id="_" :title="item.name" :price="item.price" :comps="item.competitions.join(', ')" :img="`/products/${item.name}/preview.png`" />
             </template>
         </div>
         <hr />

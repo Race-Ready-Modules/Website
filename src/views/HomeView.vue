@@ -77,7 +77,8 @@ const time_till_soonest = computed(() => {
                     <h1>About Us</h1>
                     <hr />
                     <p>
-                        At Race Ready Modules, we are dedicated to empowering the next generation of engineers and innovators in the world of Formula Student competitions, including FSAE, FSUK, and FSG. We specialize in designing and delivering high-performance modules tailored for the unique challenges faced by teams competing in these prestigious events.
+                        At Race Ready Modules, we are dedicated to empowering the next generation of engineers and innovators in the world of Formula Student competitions, including FSAE, FSUK, and
+                        FSG. We specialize in designing and delivering high-performance modules tailored for the unique challenges faced by teams competing in these prestigious events.
                     </p>
                     <p>
                         For our partner teams, we go even further by offering in-depth technical support, personalized guidance, and a collaborative approach to innovation. Whether it's
