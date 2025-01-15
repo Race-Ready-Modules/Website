@@ -16,32 +16,12 @@ function timeTill(date: Date) {
 
 const events = [
     {
-        name: "College Royal",
-        date: new Date(2024, 2, 17),
-    },
-    {
-        name: "GRC22 Reveal",
-        date: new Date(2024, 3, 6),
-    },
-    {
         name: "Formula Hybrid + Electric",
-        date: new Date(2024, 3, 29),
+        date: new Date(2025, 4, 28),
     },
     {
-        name: "Michigan FSAE",
-        date: new Date(2024, 5, 12),
-    },
-    {
-        name: "Oakland Grand Prix",
-        date: new Date(2024, 5, 29),
-    },
-    {
-        name: "Pittsburgh Shootout",
-        date: new Date(2024, 8, 14),
-    },
-    {
-        name: "Formula Wheat V2",
-        date: new Date(2024, 8, 28),
+        name: "Formula SAE Electric",
+        date: new Date(2025, 6, 17),
     },
 ];
 
@@ -57,7 +37,9 @@ const time_till_soonest = computed(() => {
 <template>
     <div class="landing_page_image">
         <div class="overlay">
-            <img class="banner" src="/media/banner.svg" alt="Banner Image" />
+            <div class="banner">
+                <img src="/media/logos/Negative-RaceReadyModules.svg" />
+            </div>
             <div class="upcoming_events" v-if="upcoming_events.length != 0">
                 <!-- The next event that we'll be attending -->
                 <h1>{{ upcoming_events[0].name }}</h1>
@@ -95,32 +77,14 @@ const time_till_soonest = computed(() => {
             <div class="additional_info">
                 <div class="about_us">
                     <h1>About Us</h1>
+                    <hr />
                     <p>
-                        Gryphon Racing is a club where University of Guelph students can gain real-world engineering experience building a performance vehicle for Formula Student competitions. This
-                        gives students the opportunity to explore and pursue their passion for knowledge through firsthand experience.
+                        At Race Ready Modules, we are dedicated to empowering the next generation of engineers and innovators in the world of Formula Student competitions, including FSAE, FSUK, and FSG. We specialize in designing and delivering high-performance modules tailored for the unique challenges faced by teams competing in these prestigious events.
                     </p>
-                </div>
-                <div class="our_cars">
-                    <h1>Our Cars</h1>
-                    <div class="car_listings">
-                        <div>
-                            <h2>GRC19</h2>
-                            <p>
-                                The first and last in Gryphon Racing's legacy. For the first time since the team's founding, the 600cc GSX-R engine was mounted transversely in the car and the iconic
-                                shaft drive was replaced with a chain and custom-built limited slip differential. This allowed the team to switch to 10” rims and lower the car's overall center of
-                                gravity.
-                            </p>
-                            <img class="car_portrait" src="/current_cars/grc19.webp" width="1000" height="667" alt="GRC19 Car Portrait" />
-                        </div>
-                        <div>
-                            <h2>GRC22</h2>
-                            <p>
-                                A new generation of Gryphon Racing design. This car marks the ending of an almost 20-year history of GSX-R powertrains. The team at Gryphon Racing has spent countless
-                                hours developing Gryphon Racing's first ever: electric car, full aerodynamics kit, custom gearbox + differential, and custom Vehicle Control Unit.
-                            </p>
-                            <img class="car_portrait" src="/current_cars/grc22.webp" width="1000" height="667" alt="GRC22 Car Portrait" />
-                        </div>
-                    </div>
+                    <p>
+                        For our partner teams, we go even further by offering in-depth technical support, personalized guidance, and a collaborative approach to innovation. Whether it's
+                        troubleshooting, optimizing system integration, or providing insights into advanced engineering techniques, we are committed to your success.
+                    </p>
                 </div>
             </div>
             <NavFooter></NavFooter>
@@ -151,7 +115,7 @@ const time_till_soonest = computed(() => {
     justify-content: center;
     flex-direction: column;
     background-color: var(--gryphon-white);
-    color: var(--gryphon-red);
+    color: var(--gryphon-light-black);
     padding: 3vh 15%;
 }
 
@@ -164,6 +128,7 @@ const time_till_soonest = computed(() => {
 
 .about_us h1 {
     margin-bottom: 0;
+    text-align: center;
 }
 
 .about_us p {
@@ -176,6 +141,16 @@ const time_till_soonest = computed(() => {
     flex-direction: column;
     line-height: 250%;
     display: flex;
+}
+
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 99%;
+    background: linear-gradient(to right, var(--gryphon-white) 5%, var(--gryphon-red) 50%, var(--gryphon-white) 95%);
+    height: 3px;
+    border-radius: 50px;
 }
 
 .our_cars > h1 {
@@ -297,5 +272,8 @@ const time_till_soonest = computed(() => {
     padding-top: 4em; /* So we are not hidden under navbar on some screens */
     width: 40%;
     min-width: 300px;
+    /* backdrop-filter: blur(5px); */
+    box-shadow: 5px;
+    /* filter: var(--light-black-filter); */
 }
 </style>

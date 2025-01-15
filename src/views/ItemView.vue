@@ -9,7 +9,7 @@ const props = defineProps<{ item: number | string }>();
         <hr />
         <div class="row">
             <div class="gallery-wrapper">
-                <ImageGallery :images="[`/products/AIL Driver/front.png`, `/products/AIL Driver/back.png`]" />
+                <ImageGallery :images="[`/products/AIL Driver/front.png`, `/products/AIL Driver/back.png`, `/products/AIL Driver/schematic.png`]" />
             </div>
             <div class="description_wrapper">
                 <h2>{{ props.item }}</h2>
@@ -28,7 +28,7 @@ const props = defineProps<{ item: number | string }>();
                 </ul>
 
                 <div class="button-wrapper">
-                    <button>Express Interest!</button>
+                    <a class="button" :href="`mailto:racereadymodules@gmail.com?subject=Interest in ${props.item}`">Express Interest!</a>
                 </div>
 
                 <p></p>
@@ -47,7 +47,7 @@ const props = defineProps<{ item: number | string }>();
 </template>
 
 <style scoped>
-a {
+.links-wrapper > a {
     display: block;
     font-size: 1rem;
     text-decoration: none;
@@ -56,7 +56,7 @@ a {
     color: black;
     transition-duration: 0.2s;
 }
-a:hover {
+.links-wrapper > a:hover {
     color: var(--gryphon-red);
     translate: 8px;
 }
@@ -111,17 +111,21 @@ a:hover {
     flex: 3;
 }
 
-button {
+.button {
     border-radius: 1rem;
     font-size: 1.25rem;
     border: none;
     width: 90%;
+    text-align: center;
+    box-shadow: 0 0 10px var(--gryphon-light-gray);
+    text-decoration: none;
+    color: var(--gryphon-light-black);
     max-width: 250px;
     padding: 0.5rem;
     transition: 0.3s;
 }
 
-button:hover {
+.button:hover {
     background-color: var(--gryphon-red);
 }
 
@@ -166,10 +170,6 @@ hr {
 h2 {
     text-align: center;
     margin: 0;
-}
-
-a {
-    text-decoration: none;
 }
 
 .profiles_list {
