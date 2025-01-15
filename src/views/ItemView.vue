@@ -6,7 +6,7 @@ import { ref } from "vue";
 const props = defineProps<{ item: string }>();
 
 const product = ref(products[props.item]);
-const images = ref(product.value.images.map((img: string) => `/products/${product.value.name}/${img}`));
+const images = ref(product.value.images.map((img: string) => `/products/${product.value.name}/${img}.png`));
 const product_description = ref(products[props.item].description.join(""));
 </script>
 
