@@ -37,9 +37,7 @@ const time_till_soonest = computed(() => {
 <template>
     <div class="landing_page_image">
         <div class="overlay">
-            <div class="banner">
-                <img src="/media/logos/Negative-RaceReadyModules.svg" />
-            </div>
+            <img class="banner" src="/media/logos/Negative-RaceReadyModules.svg" />
             <div class="upcoming_events" v-if="upcoming_events.length != 0">
                 <!-- The next event that we'll be attending -->
                 <h1>{{ upcoming_events[0].name }}</h1>
@@ -270,7 +268,7 @@ hr {
 
 .banner {
     padding-top: 4em; /* So we are not hidden under navbar on some screens */
-    width: 40%;
+    width: 25%;
     min-width: 300px;
     /* backdrop-filter: blur(5px); */
     box-shadow: 5px;

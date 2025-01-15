@@ -33,7 +33,6 @@ onMounted(() => {
 
             <div id="map" class="map"></div>
         </div>
-
     </div>
 </template>
 
@@ -99,7 +98,6 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
-
 
 hr {
     border: 0;

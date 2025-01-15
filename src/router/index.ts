@@ -14,20 +14,20 @@ export const routes = [
         component: () => import("@/views/ItemView.vue"),
         props: true,
     },
+    // {
+    //     path: "/info",
+    //     component: () => import("@/views/InfoView.vue"),
+    // },
     {
-        path: "/info",
-        component: () => import("@/views/InfoView.vue"),
+        path: "/partners",
+        component: () => import("@/views/PartnerView.vue"),
     },
+    // {
+    //     path: "/cars",
+    //     component: () => import("@/views/CarsView.vue"),
+    // },
     {
-        path: "/team",
-        component: () => import("@/views/TeamView.vue"),
-    },
-    {
-        path: "/cars",
-        component: () => import("@/views/CarsView.vue"),
-    },
-    {
-        path: "/sponsors",
-        component: () => import("@/views/SponsorView.vue"),
+        path: "/sponsorship",
+        component: () => import("@/views/SponsorshipView.vue"),
     },
 ];

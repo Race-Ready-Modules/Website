@@ -46,6 +46,7 @@ const products = [
     flex-direction: column;
     align-items: center;
     color: var(--gryphon-light-black);
+    flex-grow: 1;
 }
 
 .meet_the_team {
@@ -63,14 +64,6 @@ h1 {
     font-size: 5vw;
     font-weight: bolder;
     margin: 0;
-}
-
-.yellow_team {
-    color: var(--gryphon-yellow);
-}
-
-.red_team {
-    color: var(--gryphon-red-transparent);
 }
 
 .meet_the_team img {

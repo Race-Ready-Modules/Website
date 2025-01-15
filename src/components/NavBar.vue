@@ -18,8 +18,8 @@ window.addEventListener("scroll", () => {
         <RouterLink to="/" class="text"><img src="/media/logos/RevOutline-WIDERaceReadyModules.png" alt="Race Ready Modules" /></RouterLink>
         <RouterLink to="/" class="crest"><img src="/media/logos/RevOutline-RaceReadyModules.png" alt="Race Ready Modules" /></RouterLink>
         <RouterLink to="/shop">Shop</RouterLink>
-        <RouterLink to="/team">Partner Teams</RouterLink>
-        <RouterLink to="/sponsors">Sponsorship</RouterLink>
+        <RouterLink to="/partners">Partner Teams</RouterLink>
+        <RouterLink to="/sponsorship">Sponsorship</RouterLink>
         <!-- <RouterLink to="/info">Docs</RouterLink> -->
         <MenuIcon class="hamburger" @click="dropdown_active = !dropdown_active"></MenuIcon>
     </div>

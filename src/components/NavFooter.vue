@@ -18,6 +18,7 @@
     display: flex;
     align-items: center;
     padding: 50px 0;
+    flex-grow: 0;
 }
 
 .contact_email {
