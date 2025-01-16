@@ -5,7 +5,7 @@
         "images": ["front", "back", "schematic"],
         "documents": [
             {
-                "url": "datasheet.pdf",
+                "url": "/products/AIL Driver/datasheet.pdf",
                 "name": "Datasheet"
             }
         ],
