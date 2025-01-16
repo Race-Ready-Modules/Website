@@ -35,15 +35,12 @@ window.addEventListener("scroll", () => {
 </template>
 
 <style scoped>
-.text img {
-    height: 70%;
+a > img {
+    height: 3rem;
     margin: 10px;
     filter: var(--light-black-filter);
 }
-.crest img {
-    filter: var(--light-black-filter);
-    height: 70%;
-    margin: 10px;
+.crest {
     display: none;
 }
 
@@ -53,26 +50,33 @@ window.addEventListener("scroll", () => {
     width: 100%;
     height: 4rem;
     background-color: var(--gryphon-red-transparent);
-    margin: 0;
     display: flex;
     overflow: hidden;
     z-index: 1000;
 }
 
-.navbar > a:nth-child(n + 3) {
+.navbar a:nth-child(n + 3) {
     padding: 0 20px;
     color: var(--gryphon-light-black);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    line-height: 4rem;
+}
+
+.hamburger {
+    display: none;
+    color: var(--gryphon-light-black);
+    font-size: 2rem;
+    padding: 0 20px;
+    line-height: 4rem;
+    margin-left: auto;
+    /* align-self: flex-end; */
 }
 
 .dropdown {
     position: fixed;
-    top: 4em;
+    top: 4rem;
     right: 0;
     display: none;
     flex-direction: column;
@@ -104,18 +108,6 @@ window.addEventListener("scroll", () => {
     border-top: 0;
 }
 
-.hamburger {
-    display: none;
-    color: var(--gryphon-light-black);
-    font-size: 2rem;
-    margin-left: auto;
-    margin-right: 10px;
-    padding: 0 20px;
-    text-decoration: none;
-    align-items: center;
-    line-height: 4rem;
-}
-
 /* Dropdown animation */
 .slide-enter-from,
 .slide-leave-to {
@@ -141,6 +133,15 @@ window.addEventListener("scroll", () => {
     }
 }
 
+@media screen and (max-width: 992px) {
+    .text {
+        display: none;
+    }
+    .crest {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .navbar a:not(a:nth-child(2)) {
         display: none;
@@ -152,15 +153,6 @@ window.addEventListener("scroll", () => {
 
     .dropdown {
         display: flex;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .text {
-        display: none;
-    }
-    .crest img {
-        display: block;
     }
 }
 </style>
