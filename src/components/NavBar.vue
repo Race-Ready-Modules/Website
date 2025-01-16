@@ -40,12 +40,18 @@ window.addEventListener("scroll", () => {
     margin: 10px;
     filter: var(--light-black-filter);
 }
+.crest img {
+    filter: var(--light-black-filter);
+    height: 70%;
+    margin: 10px;
+    display: none;
+}
 
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 4em;
+    height: 4rem;
     background-color: var(--gryphon-red-transparent);
     margin: 0;
     display: flex;
@@ -53,27 +59,13 @@ window.addEventListener("scroll", () => {
     z-index: 1000;
 }
 
-.crest img {
-    display: none;
-}
-
-.navbar > a:not(a:nth-child(-n + 2)) {
+.navbar > a:nth-child(n + 3) {
     padding: 0 20px;
     color: var(--gryphon-light-black);
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
     display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.navbar > span {
-    padding: 0 20px;
-    color: var(--gryphon-light-black);
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
     align-items: center;
     text-align: center;
 }
@@ -118,6 +110,9 @@ window.addEventListener("scroll", () => {
     font-size: 2rem;
     margin-left: auto;
     margin-right: 10px;
+    padding: 0 20px;
+    text-decoration: none;
+    align-items: center;
 }
 
 /* Dropdown animation */
@@ -135,27 +130,13 @@ window.addEventListener("scroll", () => {
     }
     .highlight .text:hover img,
     .highlight .crest:hover img {
-        /* Dont highlight the crest cause it looks weird */
         filter: var(--red-filter);
         transition-duration: 0.5s;
     }
     .highlight .text:hover,
     .highlight .crest:hover {
-        /* Dont highlight the crest cause it looks weird */
         background-color: var(--gryphon-light-black);
         transition-duration: 0.5s;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .text {
-        display: none;
-    }
-    .crest img {
-        height: 70%;
-        margin: 10px;
-        filter: var(--light-black-filter);
-        display: block;
     }
 }
 
@@ -164,13 +145,21 @@ window.addEventListener("scroll", () => {
         display: none;
     }
 
-    .navbar .hamburger {
-        /* display: block; */
+    .hamburger {
         display: flex;
     }
 
     .dropdown {
         display: flex;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .text {
+        display: none;
+    }
+    .crest img {
+        display: block;
     }
 }
 </style>
