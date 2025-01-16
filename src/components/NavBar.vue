@@ -113,6 +113,7 @@ window.addEventListener("scroll", () => {
     padding: 0 20px;
     text-decoration: none;
     align-items: center;
+    line-height: 4rem;
 }
 
 /* Dropdown animation */
@@ -146,7 +147,7 @@ window.addEventListener("scroll", () => {
     }
 
     .hamburger {
-        display: flex;
+        display: block;
     }
 
     .dropdown {
