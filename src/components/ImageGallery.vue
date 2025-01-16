@@ -41,6 +41,10 @@ const options: PaginationOptions = {
     border-radius: 1rem;
     overflow: hidden;
 }
+.swiper {
+    width: 100%;
+    height: 100%;
+}
 .swiper-slide img {
     border-radius: 1rem;
     display: block;

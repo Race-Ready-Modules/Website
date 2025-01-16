@@ -15,7 +15,7 @@ const product_description = ref(products[props.item].description.join(""));
         <hr />
         <div class="row">
             <div class="gallery-wrapper">
-                <ImageGallery :images="images" />
+                <ImageGallery class="gallery" :images="images" />
             </div>
             <div class="description_wrapper">
                 <h2>{{ product.name }}</h2>
@@ -35,8 +35,6 @@ const product_description = ref(products[props.item].description.join(""));
                         <a :href="doc.url" target="_blank">{{ doc.name }}</a>
                         <hr />
                     </template>
-                    <!-- <a href="/media/club_docs/Individual_Responsibility_Signoff.pdf" target="_blank">Docs</a>
-                    <hr /> -->
                 </div>
             </div>
         </div>
@@ -80,11 +78,6 @@ const product_description = ref(products[props.item].description.join(""));
     min-height: 0;
 }
 
-@media screen and (max-width: 700px) {
-    .row {
-        flex-direction: column;
-    }
-}
 
 .button-wrapper {
     display: flex;
@@ -97,8 +90,11 @@ const product_description = ref(products[props.item].description.join(""));
     border-radius: 1rem;
     box-shadow: 0 0 10px var(--gryphon-light-gray);
     max-width: 500px;
+    width: 100%;
+}
+
+.gallery {
     padding: 1rem;
-    flex: 2;
 }
 
 .description_wrapper {
@@ -168,42 +164,5 @@ hr {
 h2 {
     text-align: center;
     margin: 0;
-}
-
-.profiles_list {
-    max-width: 1200px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 2em;
-}
-
-.profiles_list > * {
-    margin: 0.5em;
-}
-
-@media screen and (max-width: 1000px) {
-    .title {
-        display: flex;
-    }
-
-    h1 {
-        font-size: 8vw;
-        margin: 1vw;
-    }
-
-    .meet_the_team {
-        flex-direction: column;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 3rem;
-    }
-
-    .meet_the_team img {
-        margin: 0;
-        width: 95%;
-    }
 }
 </style>

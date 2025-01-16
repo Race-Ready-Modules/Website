@@ -86,6 +86,7 @@ a {
     flex-direction: column;
     align-items: center;
     color: var(--gryphon-light-black);
+    flex-grow: 1;
 }
 
 .meet_the_team {

@@ -65,6 +65,7 @@ a {
     flex-direction: column;
     align-items: center;
     color: var(--gryphon-light-black);
+    flex-grow: 1;
 }
 
 .meet_the_team {
@@ -74,7 +75,8 @@ a {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    max-width: 1200px;
+    max-width: 600px;
+    flex-flow: column;
 }
 
 h1 {
@@ -84,16 +86,13 @@ h1 {
     margin: 0;
 }
 
-.red_team {
-    color: var(--gryphon-red-transparent);
+h2 {
+    text-align: center;
+    margin: 0;
 }
 
-.meet_the_team img {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
-    margin-left: 8vw;
-    width: 60%;
-    height: auto;
+.red_team {
+    color: var(--gryphon-red-transparent);
 }
 
 hr {
@@ -104,15 +103,6 @@ hr {
     background: linear-gradient(to right, var(--gryphon-white) 5%, var(--gryphon-red) 50%, var(--gryphon-white) 95%);
     height: 3px;
     border-radius: 50px;
-}
-
-h2 {
-    text-align: center;
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
 }
 
 .profiles_list {
@@ -129,22 +119,14 @@ a {
     margin: 0.5em;
 }
 
-@media screen and (max-width: 1000px) {
-    .title {
-        display: flex;
-    }
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+}
 
-
-    .meet_the_team {
-        flex-direction: column;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 3rem;
-    }
-
-    .meet_the_team img {
-        margin: 0;
-        width: 95%;
-    }
+.title > h1 {
+    display: inline;
 }
 </style>
